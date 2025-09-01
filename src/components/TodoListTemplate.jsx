@@ -16,4 +16,10 @@ const TodoListTemplate = ({ form, children }) => {
         </main>
     );
 };
+
+TodoListTemplate.propTypes = {
+    form: PropTypes.element,
+    children: PropTypes.node
+}
+
 export default TodoListTemplate;
