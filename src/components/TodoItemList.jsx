@@ -6,13 +6,13 @@ class TodoItemList extends Component {
     render() {
         const { myTodos, myToggle, myRemove } = this.props;
         /*
-            const {id,text,checked } = todo;
+           const { id,text,checked } = todo;
         */
-        const todoList = myTodos.nap(({ id, text, checked }) => (
+        const todoList = myTodos.map(({ id, text, checked }) => (
             <TodoItem id={id} 
                       text={text} 
                       checked={checked} 
-                      onToggle={myToggle}
+                      onToggle={myToggle} 
                       onRemove={myRemove}
                       key={id}
             />
