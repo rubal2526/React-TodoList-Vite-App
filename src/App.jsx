@@ -58,7 +58,7 @@ class App extends Component {
 
   render() {
     const { todo, todos } = this.state;
-    const { handleChange, handleCreate, handleEnter, handleToggle, handleRemove } = this;
+    const { handleChange, handleCreate, handleEnter, handleToggle } = this;
 
     return (
       <TodoListTemplate form=
@@ -68,10 +68,7 @@ class App extends Component {
           myChange={handleChange}
           myCreate={handleCreate} />
         }>
-        <TodoItemList myTodos={todos}
-          myToggle={handleToggle}
-          myRemovw={handleRemove}
-        />
+        <TodoItemList myTodos={todos} myToggle={handleToggle} />
       </TodoListTemplate>
     );
   } //render
